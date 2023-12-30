@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample HTML Page</title>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
         }
+
         /* canvas {
             display: block;
             margin: 20px auto;
@@ -150,77 +151,79 @@
             <div>
                 <h3>Revenue by job type</h3>
                 <canvas id="revenueChart2" width="600" height="400"></canvas>
-                
+
             </div>
-            <script>  
-            // Sample data for the bar graph
-                    var cityData = {
-                        labels: ['Edmonds','Everett','Seattle', 'Lynnwood', 'Bothell', 'Mukilteo', ],
-                        datasets: [{
-                            label: 'Revenue for November 2019 in $',
-                            data: [5000, 10000, 15000, 20000, 25000, 30000,35000,40000,45000,50000,55000,60000],
-                            backgroundColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
-                            borderColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
-                            borderWidth: 1
-                        }]
-                    };
-                    
-                    // Get the canvas element
-                    var ctx = document.getElementById('revenueChart').getContext('2d');
-                    
-                    // Create a bar chart
-                    var myBarChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: cityData,
-                        options: {
-                            scales: {
-                                x: {
-                                    type: 'category', // x-axis is for categories (cities)
-                                    position: 'bottom'
-                                },
-                                y: {
-                                    type: 'linear', // y-axis is for numeric values (revenue)
-                                    position: 'left'
-                                }
+            <script>
+                // Sample data for the bar graph
+                var cityData = {
+                    labels: ['Edmonds', 'Everett', 'Seattle', 'Lynnwood', 'Bothell', 'Mukilteo',],
+                    datasets: [{
+                        label: 'Revenue for November 2019 in $',
+                        data: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000],
+                        backgroundColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
+                        borderColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
+                        borderWidth: 1
+                    }]
+                };
+                // Get the canvas element
+                var ctx = document.getElementById('revenueChart').getContext('2d');
+
+                // Create a bar chart
+                var myBarChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: cityData,
+                    options: {
+                        indexAxis: 'y', // Set the index axis to 'y' for horizontal bars
+                        scales: {
+                            y: {
+                                type: 'category', // y-axis is for categories (cities)
+                                position: 'left' // Align the y-axis labels to the left
+                            },
+                            x: {
+                                type: 'linear', // x-axis is for numeric values (revenue)
+                                position: 'bottom' // Align the x-axis labels to the bottom
                             }
                         }
-                    });
-                    </script>
-                       <script>  
-                        // Sample data for the bar graph
-                                var cityData = {
-                                    labels: ['Material Sale', 'Maintenance', 'HWTReplacement', 'Bid Work Plumbing', 'Service HVAC', 'Bid Work HVAC','Service Plumbing'],
-                                    datasets: [{
-                                        label: 'Revenue for November 2019 in $',
-                                        data: [20000, 40000, 60000, 80000, 100000, 120000,140000],
-                                        backgroundColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
-                                        borderColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
-                                        borderWidth: 1
-                                    }]
-                                };
-                                
-                                // Get the canvas element
-                                var ctx = document.getElementById('revenueChart2').getContext('2d');
-                                
-                                // Create a bar chart
-                                var myBarChart = new Chart(ctx, {
-                                    type: 'bar',
-                                    data: cityData,
-                                    options: {
-                                        scales: {
-                                            x: {
-                                                type: 'category', // x-axis is for categories (cities)
-                                                position: 'bottom'
-                                            },
-                                            y: {
-                                                type: 'linear', // y-axis is for numeric values (revenue)
-                                                position: 'left'
-                                            }
-                                        }
-                                    }
-                                });
-                                </script>
-            
+                    }
+                });
+
+            </script>
+            <script>
+                // Sample data for the bar graph
+                var cityData = {
+                    labels: ['Material Sale', 'Maintenance', 'HWTReplacement', 'Bid Work Plumbing', 'Service HVAC', 'Bid Work HVAC', 'Service Plumbing'],
+                    datasets: [{
+                        label: 'Revenue for November 2019 in $',
+                        data: [20000, 40000, 60000, 80000, 100000, 120000, 140000],
+                        backgroundColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
+                        borderColor: ['rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)', 'rgb(139, 195, 74)'],
+                        borderWidth: 1
+                    }]
+                };
+                // Get the canvas element
+                var ctx2 = document.getElementById('revenueChart2').getContext('2d');
+
+                // Create a bar chart
+                var myBarChart2 = new Chart(ctx2, {
+                    type: 'bar',
+                    data: cityData,
+                    options: {
+                        indexAxis: 'y', // Set the index axis to 'y' for horizontal bars
+                        scales: {
+                            y: {
+                                type: 'category', // y-axis is for categories (job types)
+                                position: 'left' // Align the y-axis labels to the left
+                            },
+                            x: {
+                                type: 'linear', // x-axis is for numeric values (revenue)
+                                position: 'bottom' // Align the x-axis labels to the bottom
+                            }
+                        }
+                    }
+                });
+
+            </script>
+
         </div>
     </div>
 </body>
