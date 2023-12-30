@@ -35,3 +35,8 @@ The dashboard page is designed with actual components, avoiding the use of image
 - The username field checks if the entered value follows the email format.
 - The password field masks the input to enhance security.
 - Password validation ensures the inclusion of at least one uppercase letter, one number, and disallows special characters except for @.
+
+![Screenshot (823)](https://github.com/kanikagoel2645/Zentrades-Smartserve--Coding-Assignment-Task-3--4/assets/111144171/bb910891-32cd-4b50-8089-40db7d6ee2c7)
+
+
+![Screenshot (822)](https://github.com/kanikagoel2645/Zentrades-Smartserve--Coding-Assignment-Task-3--4/assets/111144171/88813894-0239-4ec9-8ad9-01f50732d999)
